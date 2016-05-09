@@ -25,6 +25,7 @@ white-space:nowrap;
   <div style='width: 800px;'>
   <div id="map" style='width: 800px; height: 400px;'></div>
 </div>
-
-
-<%= gmaps("map_options" => { :raw => "{scrollwheel: false}", "zoom" => 17, "auto_zoom" => false },"markers" => { "data" => event.to_gmaps4rails }) %>
+<div class="map_container">
+  <div id="map" class="gmaps4rails_map"></div>
+</div>
+<%= gmaps( :map_options => { :container_class => "foo", :id => "bar", :class => "baz" } ) %>
