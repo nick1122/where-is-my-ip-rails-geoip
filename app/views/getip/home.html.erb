@@ -27,17 +27,4 @@ white-space:nowrap;
 </div>
 
 
-<script type="text/javascript" charset="utf-8">
-Gmaps.map = new Gmaps4RailsGoogle();
-Gmaps.load_map = function() {
-Gmaps.map.map_options.scrollwheel = false;
-Gmaps.map.map_options.zoom = 17;
-Gmaps.map.map_options.auto_zoom = false;
-Gmaps.map.initialize();
-Gmaps.map.markers = [{"lat":38.6419,"lng":-90.2646}];
-Gmaps.map.create_markers();
-Gmaps.map.adjustMapToBounds();
-Gmaps.map.callback();
-};
-window.onload = function() { Gmaps.loadMaps(); };
-</script>
+<%= gmaps("map_options" => { :raw => "{scrollwheel: false}", "zoom" => 17, "auto_zoom" => false },"markers" => { "data" => event.to_gmaps4rails }) %>
