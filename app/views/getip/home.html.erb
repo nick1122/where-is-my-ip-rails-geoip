@@ -14,12 +14,14 @@ white-space:nowrap;
 </style>
 <div class="sasa">
 
-MyIP is:<span class="sas"><%=@ip%></span>
+<span class="sas">MyIP is:<%=@ip%></span>
 <hr>
-
+<p class="sas">GeoIp:<%=@info%></p>
 <p class="sas">Your Country:<%=@info.country_name%></p>
 <p class="sas">Your Timezone:<%=@info.timezone%></p>
-
+<div style='width: 800px;'>
+  <div id="map" style='width: 800px; height: 400px;'></div>
+</div>
 
 
 
