@@ -35,8 +35,8 @@ handler = Gmaps.build('Google');
 handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
   markers = handler.addMarkers([
     {
-      "lat": <%= @info.latitude%>,
-      "lng": <%= @info.longitude%>,
+      "lat": <%= @info.latitude %>,
+      "lng": <%= @info.longitude %>,
       "picture": {
         "url": "http://people.mozilla.com/~faaborg/files/shiretoko/firefoxIcon/firefox-32.png",
         "width":  800,
